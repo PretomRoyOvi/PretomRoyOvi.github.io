@@ -27,7 +27,11 @@ function normalizeMediaUrls(value) {
     }
     return next;
   }
-  if (typeof value === 'string' && value.startsWith('/uploads/')) {
+  if (typeof value === 'string' && value.startsWith('/')) {
+    // Skip API endpoints and already normalized paths
+    if (value.startsWith('/api/') || value.startsWith('/prism-lab/')) {
+      return value;
+    }
     return `/prism-lab${value}`;
   }
   return value;
