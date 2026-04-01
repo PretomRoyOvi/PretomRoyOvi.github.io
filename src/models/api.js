@@ -1,7 +1,7 @@
 /**
  * Static API Model - reads frozen JSON payloads from public/static-data
  */
-const DATA_BASE = './static-data';
+const DATA_BASE = '/prism-lab/static-data';
 
 const ENDPOINT_TO_FILE = {
   '/home': 'home.json',
