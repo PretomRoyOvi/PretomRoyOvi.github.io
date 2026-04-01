@@ -12,7 +12,7 @@ import { useContactController } from '../../controllers/useContactController.js'
 import { useSiteController } from '../../controllers/useSiteController.js';
 import './Navbar.css';
 
-const LOGO_URL = '/unt-lettermark-eagle-logo.svg';
+const LOGO_URL = '/prism-lab/unt-lettermark-eagle-logo.svg';
 
 function NavItem({ item }) {
   const hasChildren = item.children && item.children.length > 0;

@@ -111,7 +111,7 @@ export default function PrismLabView() {
 
   const headerLogo = typeof data?.logoUrl === 'string' && data.logoUrl.trim()
     ? data.logoUrl.trim()
-    : '/prismLogo.svg';
+    : '/prism-lab/prismLogo.svg';
   const headerTitle = typeof data?.bannerText === 'string' && data.bannerText.trim()
     ? data.bannerText.trim()
     : 'Privacy Aware & Intelligent System Modeling (PRISM) Lab';

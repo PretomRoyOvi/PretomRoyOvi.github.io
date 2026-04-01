@@ -6,9 +6,9 @@ import { usePrismLabController } from '../../controllers/usePrismLabController.j
 import './Footer.css';
 
 /** UNT eagle logo in footer left */
-const EAGLE_LOGO_URL = '/eagle-logo.png';
+const EAGLE_LOGO_URL = '/prism-lab/eagle-logo.png';
 /** Lab logo above PRISM Lab text */
-const LAB_LOGO_URL = '/prism-lab-logo.png';
+const LAB_LOGO_URL = '/prism-lab/prism-lab-logo.png';
 
 const LinkedInSvg = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden>
