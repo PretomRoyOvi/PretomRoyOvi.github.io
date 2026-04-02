@@ -9,7 +9,25 @@
 import { useEffect, useState } from 'react';
 import { usePrismLabController } from '../../controllers/usePrismLabController.js';
 import LinkifiedText from '../components/LinkifiedText.jsx';
+import { publicAsset } from '../../utils/publicAsset.js';
 import './PrismLab.css';
+
+/** Same rules as api.js normalizeMediaUrls — works for JSON + default imageUrl strings. */
+function resolvePublicMediaUrl(url) {
+  if (typeof url !== 'string' || !url.trim()) return '';
+  const t = url.trim();
+  if (t.startsWith('http') || t.startsWith('data:') || t.startsWith('blob:')) return t;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  if (base && (t.startsWith(`${base}/`) || t === base)) return t;
+  if (t.startsWith('/uploads/')) {
+    return `${base}${t}`;
+  }
+  return t;
+}
+
+function researchAreaImageSrc(item) {
+  return resolvePublicMediaUrl(item?.imageUrl);
+}
 
 /* ── Defaults (used when admin hasn't edited content yet) ───── */
 
@@ -34,7 +52,7 @@ const DEFAULT_RESEARCH_AREAS = [
     title: 'Federated Unlearning',
     summary: 'Removing client influence from federated models without full retraining.',
     details: 'We design scalable unlearning protocols for decentralized learning systems so specific participants or samples can be removed while preserving utility, fairness, and communication efficiency.',
-    imageUrl: '',
+    imageUrl: '/uploads/research/fed_un.jpg',
     visible: true,
   },
   {
@@ -42,7 +60,7 @@ const DEFAULT_RESEARCH_AREAS = [
     title: 'LLM Unlearning',
     summary: 'Selective forgetting in large language models with minimal performance loss.',
     details: 'Our work studies data deletion and safety-driven removal in foundation models, combining efficient post-hoc unlearning strategies with robust evaluation to reduce residual memorization.',
-    imageUrl: '',
+    imageUrl: '/uploads/research/llm_un.jpg',
     visible: true,
   },
   {
@@ -50,7 +68,7 @@ const DEFAULT_RESEARCH_AREAS = [
     title: 'Cyber Security',
     summary: 'Secure and privacy-preserving AI against poisoning, leakage, and model attacks.',
     details: 'We investigate adversarial and privacy threats in distributed ML, including data poisoning, model inversion, and gradient leakage, then build defense pipelines suitable for real deployments.',
-    imageUrl: '',
+    imageUrl: '/uploads/research/cyber.jpg',
     visible: true,
   },
   {
@@ -58,7 +76,7 @@ const DEFAULT_RESEARCH_AREAS = [
     title: 'LLM Reasoning',
     summary: 'Improving reasoning quality, robustness, and efficiency of language models.',
     details: 'The lab explores prompting, distillation, and alignment techniques that improve multi-step reasoning and reliability while lowering inference cost in domain-specific applications.',
-    imageUrl: '',
+    imageUrl: '/uploads/research/reasoning.jpg',
     visible: true,
   },
 ];
@@ -111,7 +129,7 @@ export default function PrismLabView() {
 
   const headerLogo = typeof data?.logoUrl === 'string' && data.logoUrl.trim()
     ? data.logoUrl.trim()
-    : '/prism-lab/prismLogo.svg';
+    : publicAsset('prismLogo.svg');
   const headerTitle = typeof data?.bannerText === 'string' && data.bannerText.trim()
     ? data.bannerText.trim()
     : 'Privacy Aware & Intelligent System Modeling (PRISM) Lab';
@@ -138,6 +156,8 @@ export default function PrismLabView() {
   const missionParagraphs = Array.isArray(missionVission?.paragraphs)
     ? missionVission.paragraphs.filter((p) => typeof p === 'string' && p.trim())
     : [];
+
+  const modalAreaImageSrc = activeArea ? researchAreaImageSrc(activeArea) : '';
 
   return (
     <div className="prism-body">
@@ -169,7 +189,9 @@ export default function PrismLabView() {
             </div>
 
             <div className="prism-research-grid">
-              {visibleResearchAreas.map((item, idx) => (
+              {visibleResearchAreas.map((item, idx) => {
+                const cardImg = researchAreaImageSrc(item);
+                return (
                 <button
                   key={item.id || idx}
                   type="button"
@@ -177,8 +199,8 @@ export default function PrismLabView() {
                   onClick={() => setActiveArea(item)}
                 >
                   <div className="prism-research-card-media">
-                    {item.imageUrl ? (
-                      <img src={item.imageUrl} alt={item.title || 'Research area'} className="prism-research-card-image" />
+                    {cardImg ? (
+                      <img src={cardImg} alt={item.title || 'Research area'} className="prism-research-card-image" />
                     ) : (
                       <div className="prism-research-card-icon">{item.title?.trim()?.charAt(0)?.toUpperCase() || 'R'}</div>
                     )}
@@ -190,7 +212,8 @@ export default function PrismLabView() {
                     <span className="prism-research-readmore">Click to view details</span>
                   </div>
                 </button>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -251,9 +274,12 @@ export default function PrismLabView() {
             onClick={(e) => e.stopPropagation()}
           >
             <button type="button" className="prism-modal-close" onClick={() => setActiveArea(null)} aria-label="Close details">×</button>
-            <h3><LinkifiedText text={activeArea.title} keyPrefix="prism-modal-title" /></h3>
-            {activeArea.summary ? <p className="prism-modal-summary"><LinkifiedText text={activeArea.summary} keyPrefix="prism-modal-summary" /></p> : null}
-            <p className="prism-modal-details"><LinkifiedText text={activeArea.details || activeArea.summary || ''} keyPrefix="prism-modal-details" /></p>
+            <div className="prism-modal-scroll">
+              {modalAreaImageSrc ? <img src={modalAreaImageSrc} alt="" className="prism-modal-image" /> : null}
+              <h3><LinkifiedText text={activeArea.title} keyPrefix="prism-modal-title" /></h3>
+              {activeArea.summary ? <p className="prism-modal-summary"><LinkifiedText text={activeArea.summary} keyPrefix="prism-modal-summary" /></p> : null}
+              <p className="prism-modal-details"><LinkifiedText text={activeArea.details || activeArea.summary || ''} keyPrefix="prism-modal-details" /></p>
+            </div>
           </div>
         </div>
       )}

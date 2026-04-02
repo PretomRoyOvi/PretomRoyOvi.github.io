@@ -55,21 +55,14 @@
   line-height: 0;
 }
 
+/* White matte → footer tone; filters keep prism blues readable on #2e2e2e */
 .footer-lab-logo {
   height: 200px;
   width: auto;
   object-fit: contain;
   display: block;
-  /* Blend black background with footer so logo matches eagle styling */
-  mix-blend-mode: lighten;
-}
-
-.footer-logo {
-  width: 48px;
-  height: 48px;
-  background: var(--unt-green);
-  border-radius: 4px;
-  flex-shrink: 0;
+  mix-blend-mode: multiply;
+  filter: brightness(1.3) contrast(1.05) saturate(1.25);
 }
 
 .footer-name {

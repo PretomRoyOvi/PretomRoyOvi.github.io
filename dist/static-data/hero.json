@@ -1,16 +1,28 @@
-﻿{
+{
     "slides":  [
                    {
                        "id":  1,
-                       "imageUrl":  "/uploads/hero/1769933398884-124761663.png",
-                       "caption":  "test",
+                       "imageUrl":  "/uploads/hero/prism1.png",
+                       "caption":  "",
                        "order":  1
                    },
                    {
                        "id":  2,
-                       "imageUrl":  "/uploads/hero/1769937645747-70217689.jpg",
-                       "caption":  "test",
+                       "imageUrl":  "/uploads/hero/fl_2.png",
+                       "caption":  "",
                        "order":  2
+                   },
+                   {
+                       "id":  3,
+                       "imageUrl":  "/uploads/hero/ful3.png",
+                       "caption":  "",
+                       "order":  3
+                   },
+                   {
+                       "id":  4,
+                       "imageUrl":  "/uploads/hero/llm4.png",
+                       "caption":  "",
+                       "order":  4
                    }
                ]
 }

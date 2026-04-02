@@ -1,8 +1,7 @@
 /**
  * App - Routes: /admin (dashboard) and main site layout
  */
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import ApiHealthBanner from './views/components/ApiHealthBanner';
 import MainLayout from './views/layouts/MainLayout';
 import AdminGate from './views/pages/admin/AdminGate';
@@ -17,18 +16,6 @@ import StudentsView from './views/pages/StudentsView';
 import ContactView from './views/pages/ContactView';
 
 function App() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Handle GitHub Pages SPA routing
-    // The 404.html redirects to /?/path, so we need to handle this
-    if (location.search.startsWith('?/')) {
-      const path = location.search.slice(2); // Remove '?/'
-      navigate(path, { replace: true });
-    }
-  }, [location, navigate]);
-
   return (
     <>
       <ApiHealthBanner />

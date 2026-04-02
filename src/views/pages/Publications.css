@@ -24,6 +24,24 @@
 }
 
 /* ── Section ── */
+.pub-section-divider {
+  border: 0;
+  border-top: 2px solid #c8c8c8;
+  margin: 2.75rem 0 1.25rem;
+}
+
+.pub-conference-intro {
+  margin: 0 0 1.5rem;
+  max-width: 52rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #333;
+}
+
+.pub-section-conferences {
+  padding-top: 0.25rem;
+}
+
 .pub-section {
   margin-bottom: 2.5rem;
 }

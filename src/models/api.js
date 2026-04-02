@@ -15,7 +15,6 @@ const ENDPOINT_TO_FILE = {
   '/contact': 'contact.json',
   '/hero': 'hero.json',
   '/site': 'site.json',
-  '/social': 'social.json',
 };
 
 function normalizeMediaUrls(value) {
@@ -28,7 +27,8 @@ function normalizeMediaUrls(value) {
     return next;
   }
   if (typeof value === 'string' && value.startsWith('/uploads/')) {
-    return `/prism-lab${value}`;
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    return `${base}${value}`;
   }
   return value;
 }

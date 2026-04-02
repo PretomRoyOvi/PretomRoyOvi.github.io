@@ -11,8 +11,9 @@ import { usePrismLabController } from '../../controllers/usePrismLabController.j
 import { useContactController } from '../../controllers/useContactController.js';
 import { useSiteController } from '../../controllers/useSiteController.js';
 import './Navbar.css';
+import { publicAsset } from '../../utils/publicAsset.js';
 
-const LOGO_URL = '/prism-lab/unt-lettermark-eagle-logo.svg';
+const LOGO_URL = publicAsset('unt-lettermark-eagle-logo.svg');
 
 function NavItem({ item }) {
   const hasChildren = item.children && item.children.length > 0;

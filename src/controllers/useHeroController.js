@@ -12,7 +12,11 @@ export function useHeroController() {
   useEffect(() => {
     heroModel
       .getData()
-      .then((data) => setSlides(data?.slides ?? []))
+      .then((data) => {
+        const list = [...(data?.slides ?? [])];
+        list.sort((a, b) => (Number(a.order) || 0) - (Number(b.order) || 0));
+        setSlides(list);
+      })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, []);

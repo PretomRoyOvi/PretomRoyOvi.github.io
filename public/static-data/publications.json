@@ -1,4 +1,4 @@
-﻿{
+{
     "sections":  [
                      {
                          "id":  "books",
@@ -38,7 +38,7 @@
                      },
                      {
                          "id":  "conferences",
-                         "label":  "Conferences",
+                         "label":  "Conference papers",
                          "entries":  [
                                          {
                                              "id":  "pub-1771405730492-934039",
@@ -99,11 +99,53 @@
                                              "text":  "Rashid, H. A., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Busart, C., Gangopadhyay, A., \u0026 Mohsenin, T. (2022). Tinym2net: A flexible system algorithm co-designed multimodal learning framework for tiny devices. ArXiv, arXiv-2202. https://pmc.ncbi.nlm.nih.gov/articles/PMC8845504/",
                                              "year":  "2022",
                                              "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001001-100001",
+                                             "text":  "Sharma, S., Katikala, J., Srinivasan, K., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Holagh, S.R., Maloth, N., Cleveland, A., McMahan, T., Kaplan-Rakowski, R., \u0022Virtual Reality-Based AI Mental Health Companion: A Multimodal System for Therapy, Mindfulness, and Stress Detection\u0022, Proceedings of the IS\u0026T International Symposium on Electronic Imaging (EI 2026) in the Engineering Reality of Virtual Reality Conference (ERVR), Hyatt Regency San Francisco Airport in Burlingame, California, March 1 - 5, 2026.",
+                                             "year":  "2026",
+                                             "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001002-100002",
+                                             "text":  "Alam, F., Sharma, S., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Hossain, T., \u0022Simulating Epidemic Response and Communication using AI-Powered NPCs in Virtual Reality\u0022, Proceedings of the IS\u0026T International Symposium on Electronic Imaging (EI 2026) in the Engineering Reality of Virtual Reality Conference (ERVR), Hyatt Regency San Francisco Airport in Burlingame, California, March 1 - 5, 2026.",
+                                             "year":  "2026",
+                                             "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001003-100003",
+                                             "text":  "Katikala, J., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Sharma, S., \u0022Real-Time Multimodal Sensing and Spatiotemporal Event Logging on Mobile Devices\u0022, Proceedings of the IEEE SoutheastCon, Huntsville, Alabama, 13-15 March 2026.",
+                                             "year":  "2026",
+                                             "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001004-100004",
+                                             "text":  "Rishat, M.A.S.A., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Sharma, S., \u0022A Scalable Hybrid Model for EEG-Based Stress Detection Toward Real-Time Deployability\u0022, Proceedings of the IEEE SoutheastCon, Huntsville, Alabama, 13-15 March 2026.",
+                                             "year":  "2026",
+                                             "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001005-100005",
+                                             "text":  "Sharma, S., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Katikala, J. M., \u0022Virtual Reality-Assisted Building Fire Evacuation Training using Digital Twin and Brain Computer Interface Devices\u0022, Proceedings of the 28th International Conference on Human-Computer Interaction (HCI International 2026), Thematic Area: Virtual, Augmented and Mixed Reality, Montreal Convention Centre, Montreal, Canada, 26 - 31 July 2026. (Accepted)",
+                                             "year":  "2026",
+                                             "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001006-100006",
+                                             "text":  "Moses, P.A., Ding, D., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Sharma, S., \u0022Immersive Virtual Reality Training for Active Shooter Response Using Digital Twin Modeling and Brain\u2013Computer Interfaces\u0022, Proceedings of the IEEE 6th International Conference on Electrical, Computer and Energy Technologies (ICECET), Rome, Italy, 6-9 July 2026. (Accepted).",
+                                             "year":  "2026",
+                                             "visible":  true
+                                         },
+                                         {
+                                             "id":  "pub-1771412001007-100007",
+                                             "text":  "Sarkar, A., \u003cb\u003eOvi, P. R.\u003c/b\u003e, Sharma, S., Rahnemoonfar, M., Gangopadhyay, A., \u0022Consistent and Robust Visual Explanations for Remote Sensing Image Classification\u0022, Proceedings of the 2026 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), Washington, D.C, 9 - 14 August 2026. (Submitted)",
+                                             "year":  "2026",
+                                             "visible":  true
                                          }
                                      ],
                          "summary":  "",
                          "visible":  true,
-                         "groupByYear":  false
+                         "groupByYear":  true
                      },
                      {
                          "id":  "posters",

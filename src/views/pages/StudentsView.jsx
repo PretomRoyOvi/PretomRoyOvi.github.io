@@ -56,7 +56,6 @@ function StudentCard({ student }) {
     scholarUrl,
     education = [],
     researchInterests = [],
-    bio,
     email,
     imageUrl,
     linkedinUrl,
@@ -104,19 +103,12 @@ function StudentCard({ student }) {
 
         {researchInterests.length > 0 && (
           <div className="student-info-block">
-            <div className="student-info-label">Research Interests</div>
+            <div className="student-info-label">Current Research</div>
             <ul>
               {researchInterests.map((ri, i) => (
                 <li key={i}><LinkifiedText text={ri} keyPrefix={`student-ri-${student.id}-${i}`} /></li>
               ))}
             </ul>
-          </div>
-        )}
-
-        {bio && (
-          <div className="student-info-block">
-            <div className="student-info-label">Bio</div>
-            <p className="student-bio"><LinkifiedText text={bio} keyPrefix={`student-bio-${student.id}`} /></p>
           </div>
         )}
 

@@ -4,11 +4,10 @@
 import { useState, useEffect } from 'react';
 import { usePrismLabController } from '../../controllers/usePrismLabController.js';
 import './Footer.css';
+import { publicAsset } from '../../utils/publicAsset.js';
 
-/** UNT eagle logo in footer left */
-const EAGLE_LOGO_URL = '/prism-lab/eagle-logo.png';
-/** Lab logo above PRISM Lab text */
-const LAB_LOGO_URL = '/prism-lab/prism-lab-logo.png';
+const EAGLE_LOGO_URL = publicAsset('unt-eagle-only.svg');
+const LAB_LOGO_URL = publicAsset('prismLogo.svg');
 
 const LinkedInSvg = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden>
@@ -31,18 +30,27 @@ const ScholarSvg = () => (
   </svg>
 );
 
+/** ORCID-style mark (green badge reads on footer hover states) */
+const OrcidSvg = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden>
+    <rect width="24" height="24" rx="3" fill="#A6CE39" />
+    <text x="12" y="16" textAnchor="middle" fill="#fff" fontSize="8" fontFamily="Segoe UI, system-ui, sans-serif" fontWeight="700">iD</text>
+  </svg>
+);
+
 const ICON_MAP = {
   linkedin: LinkedInSvg,
   twitter: TwitterSvg,
   github: GitHubSvg,
   scholar: ScholarSvg,
+  orcid: OrcidSvg,
 };
 
 const DEFAULT_SOCIAL_LINKS = [
-  { id: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn', icon: 'linkedin', order: 1 },
-  { id: 'twitter', url: 'https://twitter.com', label: 'X (Twitter)', icon: 'twitter', order: 2 },
-  { id: 'github', url: 'https://github.com', label: 'GitHub', icon: 'github', order: 3 },
-  { id: 'scholar', url: 'https://scholar.google.com', label: 'Google Scholar', icon: 'scholar', order: 4 },
+  { id: 'scholar', url: 'https://scholar.google.com/citations?user=iy-E9Y4AAAAJ&hl=en&oi=ao', label: 'Google Scholar', icon: 'scholar', order: 1 },
+  { id: 'linkedin', url: 'https://www.linkedin.com/in/pretom-roy-ovi-phd-258603237/', label: 'LinkedIn', icon: 'linkedin', order: 2 },
+  { id: 'github', url: 'https://github.com/PretomRoyOvi', label: 'GitHub', icon: 'github', order: 3 },
+  { id: 'orcid', url: 'https://orcid.org/0009-0004-4955-1679', label: 'ORCID', icon: 'orcid', order: 4 },
 ];
 
 export default function Footer() {
@@ -83,7 +91,7 @@ export default function Footer() {
             <p className="footer-follow">Follow Us</p>
             <div className="footer-socials">
               {!loadingLinks && socialLinks.map(({ id, url, label, icon }) => {
-                const Icon = ICON_MAP[icon] || ICON_MAP.scholar;
+                const Icon = ICON_MAP[icon] || ICON_MAP.linkedin;
                 return (
                   <a key={id} href={url} target="_blank" rel="noopener noreferrer" className="footer-social" aria-label={label}>
                     <Icon />

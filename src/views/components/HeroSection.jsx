@@ -33,7 +33,9 @@ export default function HeroSection() {
             <div
               key={slide.id}
               className={'hero-section-slide' + (i === activeIndex ? ' active' : '')}
-              style={{ backgroundImage: slide.imageUrl ? `url(${slide.imageUrl})` : undefined }}
+              style={{
+                backgroundImage: slide.imageUrl ? `url("${slide.imageUrl}")` : undefined,
+              }}
             />
           ))
         )}
