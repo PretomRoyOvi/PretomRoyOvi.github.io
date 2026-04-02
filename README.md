@@ -34,7 +34,7 @@ git push origin source
 .\deploy.ps1
 ```
 
-Wait 1–2 minutes, then open **https://pretomroyovi.github.io/** (hash routes: `https://pretomroyovi.github.io/#/`).
+Wait 1-2 minutes, then open **https://pretomroyovi.github.io/** (hash routes: `https://pretomroyovi.github.io/#/`).
 
 **macOS / Linux:** `chmod +x deploy.sh` then `./deploy.sh`
 
