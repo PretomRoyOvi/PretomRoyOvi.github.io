@@ -84,4 +84,4 @@ try {
     }
 }
 
-Write-Host ">>> Done. After 1–2 minutes open: https://pretomroyovi.github.io/" -ForegroundColor Green
+Write-Host '>>> Done. After 1-2 minutes open: https://pretomroyovi.github.io/' -ForegroundColor Green
