@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 
 /**
  * GitHub Pages asset base:
- * - CI sets GITHUB_REPOSITORY=owner/repo → /RepoName/ for project pages, or / for user site (repo *.github.io).
- * - Local `npm run build`: same fallback as this repo (PretomRoyOvi/PretomRoyOvi → /PretomRoyOvi/).
+ * - CI sets GITHUB_REPOSITORY=owner/repo → `/` for user site repos (`*.github.io`), else `/<repo>/`.
+ * - Local `npm run build`: fallback `/` (matches PretomRoyOvi.github.io user site).
  */
 function githubPagesBase() {
   const full = process.env.GITHUB_REPOSITORY;
@@ -13,7 +13,7 @@ function githubPagesBase() {
     if (repo.toLowerCase().endsWith('.github.io')) return '/';
     return `/${repo}/`;
   }
-  return '/PretomRoyOvi/';
+  return '/';
 }
 
 export default defineConfig(({ mode }) => ({
