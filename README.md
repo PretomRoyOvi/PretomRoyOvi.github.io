@@ -2,7 +2,49 @@
 
 This project is a Vite + React static website configured for GitHub Pages.
 
-Use this guide if you want to submit the project to your professor with complete, reproducible steps.
+## Simple deploy (recommended): `source` + `main` + PowerShell
+
+Use branch **`source`** for all app code. Branch **`main`** holds **only** the built site (`dist/`) for GitHub Pages — no GitHub Actions required.
+
+**One-time GitHub setting:** Repository → **Settings** → **Pages** → **Build and deployment** → **Deploy from a branch** → Branch **`main`**, folder **`/` (root)**. (Turn off **GitHub Actions** as the Pages source if it is enabled.)
+
+**One-time git setup** (if you only have `main` today):
+
+```powershell
+Set-Location "<path-to-this-repo>"
+git checkout main
+git branch source
+git push -u origin source
+```
+
+On GitHub, set **default branch** to **`source`** so daily work stays on source; **`main`** is only for published HTML.
+
+**Everyday workflow**
+
+```powershell
+Set-Location "<path-to-this-repo>"
+git checkout source
+git pull origin source
+npm install
+npm run dev
+# edit files, test locally
+git add .
+git commit -m "Update site content"
+git push origin source
+.\deploy.ps1
+```
+
+Wait 1–2 minutes, then open **https://pretomroyovi.github.io/** (hash routes: `https://pretomroyovi.github.io/#/`).
+
+**macOS / Linux:** `chmod +x deploy.sh` then `./deploy.sh`
+
+**Optional:** `USE_NPM_CI=1 ./deploy.sh` or `$env:USE_NPM_CI='1'; .\deploy.ps1` to run `npm ci` instead of `npm install`.
+
+**If `npm install` fails on peers:** `npm install --legacy-peer-deps`, then `npm run build`, then run the deploy script again.
+
+---
+
+Use the rest of this guide if you want a longer, step-by-step write-up for class submission.
 
 ## 1) Prerequisites
 
