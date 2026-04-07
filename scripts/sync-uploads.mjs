@@ -1,4 +1,4 @@
-import { existsSync, rmSync, cpSync, mkdirSync } from 'node:fs';
+import { existsSync, cpSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const root = process.cwd();
@@ -11,10 +11,8 @@ if (!existsSync(source)) {
 }
 
 mkdirSync(resolve(root, 'public'), { recursive: true });
+mkdirSync(target, { recursive: true });
 
-if (existsSync(target)) {
-  rmSync(target, { recursive: true, force: true });
-}
-
+/* Merge into public/uploads — do not delete the whole tree (wiped contact/hero/research, etc.). */
 cpSync(source, target, { recursive: true });
-console.log('[sync-uploads] Copied uploads -> public/uploads');
+console.log('[sync-uploads] Merged uploads/ -> public/uploads');

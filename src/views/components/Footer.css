@@ -233,17 +233,30 @@
     width: 100%;
     min-width: 0;
     justify-content: center;
+    align-items: center;
   }
   .footer-inner {
     text-align: center;
     margin: 0;
     padding: 0;
-  }
-  .footer-eagle-column {
-    justify-content: center;
+    max-width: 100%;
   }
   .footer-left {
     align-items: center;
     text-align: center;
+  }
+
+  .footer-eagle-logo,
+  .footer-lab-logo {
+    height: min(140px, 36vw);
+  }
+
+  .footer-name {
+    font-size: 1.1rem;
+  }
+
+  .footer-social-section {
+    align-items: center;
+    margin-left: 0;
   }
 }

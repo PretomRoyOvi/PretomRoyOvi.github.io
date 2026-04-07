@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .navbar-vline {
@@ -51,12 +52,48 @@
 
 .navbar-brand {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1rem, 4.2vw, 2rem);
   color: var(--dark-text, #333333);
   letter-spacing: 0.02em;
   padding-bottom: 0.25rem;
   border-bottom: 3px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.navbar-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: var(--dark-text, #333333);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.navbar-menu-toggle:hover {
+  background: #f5f5f5;
+}
+
+.navbar-menu-toggle-visual {
+  display: block;
+  margin-top: -2px;
+}
+
+.nav-link--sub {
+  padding-left: 1.35rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  border-left: 3px solid #e0e0e0;
+  margin-left: 0.5rem;
 }
 
 .navbar-brand.active {
@@ -157,12 +194,69 @@
   color: var(--unt-green);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar-inner {
-    padding: 0.75rem 1rem 0.75rem 1rem;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.5rem;
+    row-gap: 0;
+    padding: 0.65rem 1rem 0.65rem 0.75rem;
+    align-items: center;
   }
 
-  .nav {
+  .navbar-logo {
+    height: 42px;
+  }
+
+  .navbar-logo-wrap {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .navbar-title-wrap {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .navbar-menu-toggle {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .navbar-inner > .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .nav--mobile {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0.15rem;
+    width: 100%;
+    padding: 0.65rem 0 0.35rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid #e8e8e8;
+    max-height: min(70vh, 28rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav--mobile.nav--open {
+    display: flex;
+  }
+
+  .nav--mobile .nav-link {
+    width: 100%;
+    box-sizing: border-box;
     justify-content: flex-start;
+  }
+
+  .nav--mobile .nav-item-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 }

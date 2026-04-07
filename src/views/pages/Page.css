@@ -43,6 +43,25 @@
   margin-right: auto;
   padding: 2rem 1.5rem 2rem 1rem;
   background: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .page-banner {
+    padding: 1rem 1rem 1rem 0.85rem;
+  }
+
+  .page-banner h1 {
+    font-size: 1.35rem;
+  }
+
+  .page-content-area {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+
+  .page-content {
+    padding: 1.25rem 1rem 1.5rem;
+  }
 }
 
 /* Home: hero image + dark green title bar */

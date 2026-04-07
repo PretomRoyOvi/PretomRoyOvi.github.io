@@ -30,7 +30,7 @@
                     "name": "Tasmiah Tahsin Mayeesha",
                     "email": "TasmiahTahsinMayeesha@my.unt.edu",
                     "title": "Ph.D. Student",
-                    "imageUrl": "/uploads/students/tasmiah-tahsin-mayeesha.png",
+                    "imageUrl": "/uploads/students/tasmiah-tahsin-mayeesha.jpg",
                     "education": [
                         "B.Sc. in Computer Science and Engineering, North South University, 2020"
                     ],
@@ -55,14 +55,14 @@
                     "name": "Sowgoto Raha Sunny",
                     "email": "sowgotorahasunny@my.unt.edu",
                     "title": "M.S. Student",
-                    "imageUrl": "/uploads/students/sowgoto-raha-sunny.png",
+                    "imageUrl": "/uploads/students/sowgoto-raha-sunny.jpg",
                     "education": [
                         "M.S. in Information Technology, Jahangirnagar University, Dhaka, Bangladesh",
                         "B.S. in Information Technology, Jahangirnagar University, Dhaka, Bangladesh"
                     ],
                     "department": "M.S. in Cybersecurity, University of North Texas",
                     "scholarUrl": "",
-                    "linkedinUrl": "",
+                    "linkedinUrl": "https://www.linkedin.com/in/sunny-raha/",
                     "researchInterests": [
                         "Cybersecurity"
                     ]
@@ -73,7 +73,7 @@
                     "name": "Kanishk Sharma",
                     "email": "kanishksharma@my.unt.edu, sharmakanishk891@gmail.com",
                     "title": "Master's Student",
-                    "imageUrl": "/uploads/students/kanishk-sharma.png",
+                    "imageUrl": "/uploads/students/kanishk-sharma.jpg",
                     "education": [
                         "M.S. in Business Information Systems, 2018",
                         "PGDM (MBA), 2014",

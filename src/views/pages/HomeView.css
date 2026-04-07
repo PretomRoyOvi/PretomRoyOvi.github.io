@@ -154,3 +154,34 @@
   background: rgb(0, 83, 38);
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .home-section-title {
+    font-size: clamp(1.65rem, 7vw, 2.25rem);
+  }
+
+  .home-prose p,
+  .home-edu-meta,
+  .home-edu-detail {
+    font-size: 1.05rem;
+    text-align: left;
+  }
+
+  .home-page-content {
+    text-align: left;
+  }
+
+  .home-prose h3,
+  .home-edu-degree {
+    font-size: 1.2rem;
+  }
+
+  .home-research-cards-wrap .prism-research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta-strip {
+    margin-top: 2.5rem;
+    padding: 1.5rem 0.75rem 1rem;
+  }
+}

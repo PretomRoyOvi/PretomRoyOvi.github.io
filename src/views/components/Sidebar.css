@@ -240,3 +240,30 @@
   border-radius: 4px;
   font-weight: 500;
 }
+
+@media (max-width: 960px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  .sidebar-profile {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .sidebar-profile-image,
+  .sidebar-profile-image--placeholder {
+    max-width: min(220px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar-sublist.open {
+    max-height: 80vh;
+  }
+}
