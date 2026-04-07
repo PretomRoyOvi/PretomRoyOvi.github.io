@@ -1,7 +1,11 @@
 /**
  * Static API Model - reads frozen JSON payloads from public/static-data
+ * Use BASE_URL (not relative ./static-data) so assets resolve on GitHub Pages and any base path.
  */
-const DATA_BASE = './static-data';
+function staticDataFileUrl(fileName) {
+  const base = import.meta.env.BASE_URL;
+  return `${base}static-data/${fileName}`;
+}
 
 const ENDPOINT_TO_FILE = {
   '/home': 'home.json',
@@ -28,7 +32,7 @@ function normalizeMediaUrls(value) {
   }
   if (typeof value === 'string' && value.startsWith('/uploads/')) {
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-    return `${base}${value}`;
+    return base ? `${base}${value}` : value;
   }
   return value;
 }
@@ -41,7 +45,7 @@ async function request(endpoint) {
 
   let res;
   try {
-    res = await fetch(`${DATA_BASE}/${fileName}`);
+    res = await fetch(staticDataFileUrl(fileName));
   } catch (err) {
     throw err;
   }
