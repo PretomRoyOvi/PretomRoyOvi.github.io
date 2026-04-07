@@ -23,11 +23,11 @@
     "researchAreas": [
         {
             "id": "federated-unlearning",
-            "title": "Federated Unlearning",
+            "title": "Federated Learning/Unlearning",
             "details": "We design scalable unlearning protocols for decentralized learning systems so specific participants or samples can be removed while preserving utility, fairness, and communication efficiency.",
             "summary": "We design scalable unlearning protocols for decentralized learning systems so specific participants or samples can be removed while preserving utility, fairness, and communication efficiency.",
             "visible": true,
-            "imageUrl": "/uploads/research/fed_un.jpg"
+            "imageUrl": "/uploads/research/fed_un.png"
         },
         {
             "id": "llm-unlearning",
