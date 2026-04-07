@@ -3,6 +3,7 @@
  * Sections: Graduate, Undergraduate, High School, Alumni
  */
 import { useStudentController } from '../../controllers/useStudentController.js';
+import { siteMediaUrl } from '../../utils/publicAsset.js';
 import LinkifiedText from '../components/LinkifiedText.jsx';
 import './Page.css';
 import './Students.css';
@@ -66,7 +67,13 @@ function StudentCard({ student }) {
       {/* Photo column */}
       <div className="student-photo-col">
         {imageUrl ? (
-          <img src={imageUrl} alt={name} className="student-photo" />
+          <img
+            src={siteMediaUrl(imageUrl)}
+            alt={name}
+            className="student-photo"
+            loading="lazy"
+            decoding="async"
+          />
         ) : (
           <div className="student-photo-placeholder">No Photo</div>
         )}
