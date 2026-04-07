@@ -1,54 +1,112 @@
 {
-    "sections":  [
-                     {
-                         "id":  "graduate",
-                         "label":  "Ph.D. Students",
-                         "visible":  true,
-                         "students":  [
-                                          {
-                                              "id":  "stu-1771401560728-431812",
-                                              "bio":  "Md Al Samiul Amin Rishat is currently pur- suing a Ph.D. in the Department of Information Science with a concentration in Data Science at the University of North Texas. He holds a Bachelor of Science degree from the American International University-Bangladesh (AIUB). He has professional experience as a worker at Samsung R\u0026D Institute, where he contributed to various innovative projects. His research interests include Blockchain, Cyber- security, EEG, Federated Learning/Unlearning, IoT, and Privacy in AI-integrated systems. Rishat has published multiple peer-reviewed articles in reputable venues such as ACM, Taylor \u0026 Francis, MDPI, and Q1-ranked journals. His contributions span across interdisciplinary areas, including blockchain applications in Shariah- compliant banking systems and privacy-preserving frameworks in AI and IoT. He actively collaborates with researchers from the U.S., South Korea, and Bangladesh, contributing to both conference proceedings and journal publications that advance the development of secure and intelligent systems.",
-                                              "name":  "Rishat, Md Al Samiul Amin",
-                                              "email":  "MdAlSamiulAminRishat@my.unt.edu, samiaulamin@gmail.com",
-                                              "title":  "Ph.D Student",
-                                              "imageUrl":  "/uploads/students/rishat-profile.png",
-                                              "education":  [
-                                                                "Bsc in Computer Science and Engineering - American International University Bangladesh (AIUB) - 2021"
-                                                            ],
-                                              "department":  "Department of Information Science, Concentration in Data Science",
-                                              "scholarUrl":  "https://scholar.google.com/citations?user=FEzG2dMAAAAJ\u0026hl=en",
-                                              "linkedinUrl":  "https://www.linkedin.com/in/fasvusdnfg/",
-                                              "researchInterests":  [
-                                                                         "Security \u0026 Privacy",
-                                                                        "Federated Learning / Unlearning",
-                                                                        "EEG Classification"
-                                                                    ]
-                                          }
-                                      ]
-                     },
-                     {
-                         "id":  "undergraduate",
-                         "label":  "Undergraduate Students",
-                         "visible":  false,
-                         "students":  [
-
-                                      ]
-                     },
-                     {
-                         "id":  "highschool",
-                         "label":  "High School Students",
-                         "visible":  false,
-                         "students":  [
-
-                                      ]
-                     },
-                     {
-                         "id":  "alumni",
-                         "label":  "Alumni",
-                         "visible":  false,
-                         "students":  [
-
-                                      ]
-                     }
-                 ]
+    "sections": [
+        {
+            "id": "graduate",
+            "label": "Ph.D. Students",
+            "visible": true,
+            "students": [
+                {
+                    "id": "stu-1771401560728-431812",
+                    "bio": "Md Al Samiul Amin Rishat is currently pur- suing a Ph.D. in the Department of Information Science with a concentration in Data Science at the University of North Texas. He holds a Bachelor of Science degree from the American International University-Bangladesh (AIUB). He has professional experience as a worker at Samsung R\u0026D Institute, where he contributed to various innovative projects. His research interests include Blockchain, Cyber- security, EEG, Federated Learning/Unlearning, IoT, and Privacy in AI-integrated systems. Rishat has published multiple peer-reviewed articles in reputable venues such as ACM, Taylor \u0026 Francis, MDPI, and Q1-ranked journals. His contributions span across interdisciplinary areas, including blockchain applications in Shariah- compliant banking systems and privacy-preserving frameworks in AI and IoT. He actively collaborates with researchers from the U.S., South Korea, and Bangladesh, contributing to both conference proceedings and journal publications that advance the development of secure and intelligent systems.",
+                    "name": "Rishat, Md Al Samiul Amin",
+                    "email": "MdAlSamiulAminRishat@my.unt.edu, samiaulamin@gmail.com",
+                    "title": "Ph.D Student",
+                    "imageUrl": "/uploads/students/rishat-profile.png",
+                    "education": [
+                        "Bsc in Computer Science and Engineering - American International University Bangladesh (AIUB) - 2021"
+                    ],
+                    "department": "Department of Information Science, Concentration in Data Science",
+                    "scholarUrl": "https://scholar.google.com/citations?user=FEzG2dMAAAAJ\u0026hl=en",
+                    "linkedinUrl": "https://www.linkedin.com/in/fasvusdnfg/",
+                    "researchInterests": [
+                        "Security \u0026 Privacy",
+                        "Federated Learning / Unlearning",
+                        "EEG Classification"
+                    ]
+                },
+                {
+                    "id": "stu-1744041000001-501001",
+                    "bio": "",
+                    "name": "Tasmiah Tahsin Mayeesha",
+                    "email": "TasmiahTahsinMayeesha@my.unt.edu",
+                    "title": "Ph.D. Student",
+                    "imageUrl": "/uploads/students/tasmiah-tahsin-mayeesha.png",
+                    "education": [
+                        "B.Sc. in Computer Science and Engineering, North South University, 2020"
+                    ],
+                    "department": "Department of Information Science, Concentration in Data Science",
+                    "scholarUrl": "https://scholar.google.com/citations?user=MRDAGP8AAAAJ\u0026hl=en",
+                    "linkedinUrl": "https://www.linkedin.com/in/tahsin-mayeesha/",
+                    "researchInterests": [
+                        "LLM evaluation, interpretability, and robustness",
+                        "Human–AI alignment"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "masters",
+            "label": "Master's Students",
+            "visible": true,
+            "students": [
+                {
+                    "id": "stu-1744041000002-501002",
+                    "bio": "",
+                    "name": "Sowgoto Raha Sunny",
+                    "email": "sowgotorahasunny@my.unt.edu",
+                    "title": "M.S. Student",
+                    "imageUrl": "/uploads/students/sowgoto-raha-sunny.png",
+                    "education": [
+                        "M.S. in Information Technology, Jahangirnagar University, Dhaka, Bangladesh",
+                        "B.S. in Information Technology, Jahangirnagar University, Dhaka, Bangladesh"
+                    ],
+                    "department": "M.S. in Cybersecurity, University of North Texas",
+                    "scholarUrl": "",
+                    "linkedinUrl": "https://www.linkedin.com/in/sunny-raha/",
+                    "researchInterests": [
+                        "Cybersecurity"
+                    ]
+                },
+                {
+                    "id": "stu-1744041000003-501003",
+                    "bio": "",
+                    "name": "Kanishk Sharma",
+                    "email": "kanishksharma@my.unt.edu, sharmakanishk891@gmail.com",
+                    "title": "Master's Student",
+                    "imageUrl": "/uploads/students/kanishk-sharma.png",
+                    "education": [
+                        "M.S. in Business Information Systems, 2018",
+                        "PGDM (MBA), 2014",
+                        "B.Tech in Computer Science \u0026 Engineering, 2012"
+                    ],
+                    "department": "Department of Information Science, Concentration in Data Science",
+                    "scholarUrl": "",
+                    "linkedinUrl": "https://www.linkedin.com/in/kanishksharma1/",
+                    "researchInterests": [
+                        "Trustworthy AI \u0026 agentic RAG architectures in personalized education",
+                        "AR-guided spatial routing \u0026 emergency navigation systems",
+                        "Agentic AI \u0026 predictive analytics for institutional finance"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "undergraduate",
+            "label": "Undergraduate Students",
+            "visible": false,
+            "students": []
+        },
+        {
+            "id": "highschool",
+            "label": "High School Students",
+            "visible": false,
+            "students": []
+        },
+        {
+            "id": "alumni",
+            "label": "Alumni",
+            "visible": false,
+            "students": []
+        }
+    ]
 }
