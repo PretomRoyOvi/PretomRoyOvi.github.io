@@ -127,7 +127,7 @@
                                      ],
                          "summary":  "",
                          "visible":  true,
-                         "groupByYear":  false
+                         "groupByYear":  true
                      },
                      {
                          "id":  "posters",
